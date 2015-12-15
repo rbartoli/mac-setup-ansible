@@ -1,0 +1,103 @@
+user: riccardo
+home_dir: "/Users/{{ user }}"
+nvm_dir: "{{ home_dir }}/.nvm"
+homebrew_cask_appdir: "/Applications"
+node_version: "v5.2.0"
+ruby_version: "2.2.3"
+
+homebrew_taps:
+  - homebrew/dupes
+  - caskroom/cask
+  - caskroom/fonts
+  - caskroom/versions
+
+homebrew_packages:
+  - android-sdk
+  - coreutils
+  - findutils
+  - git
+  - git-extras
+  - git-flow
+  - mackup
+  - rbenv
+  - ruby-build
+  - watchman
+  - wget
+  - z
+
+homebrew_cask_packages:
+  - alfred
+  - appcleaner
+  - betterzipql
+  - caffeine
+  - cyberduck
+  - cyberghost
+  - diffmerge
+  - doxie
+  - dropbox
+  - electrum
+  - evernote
+  - firefox
+  - font-source-code-pro-for-powerline
+  - flux
+  - gas-mask
+  - google-chrome
+  - google-drive
+  - hipchat
+  - imageoptim
+  - iterm2
+  - java
+  - jumpcut
+  - mongodb
+  - mosh
+  - ngrok
+  - qlcolorcode
+  - qlimagesize
+  - qlmarkdown
+  - qlstephen
+  - quicklook-json
+  - rescuetime
+  - robomongo
+  - sequel-pro
+  - skitch
+  - skype
+  - spectacle
+  - spotify
+  - sublime-text3
+  - teamviewer
+  - the-unarchiver
+  - torbrowser
+  - transmission
+  - vagrant
+  - virtualbox
+  - vlc
+  - vmware-fusion
+  - webstorm
+  - ynab
+
+npm_modules:
+  - bower
+  - browser-sync
+  - cordova
+  - ember-cli
+  - eslint
+  - generator-nom
+  - grunt
+  - gulp
+  - http-server
+  - ios-sim
+  - jscs
+  - jshint
+  - node-inspector 
+  - nodemon
+  - npm
+  - npm-check-updates
+  - phonegap
+  - speed-test
+  - yo
+
+vagrant_plugins:
+  - vagrant-vbguest
+
+ruby_gems:
+  - sass

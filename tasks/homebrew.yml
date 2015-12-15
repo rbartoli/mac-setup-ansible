@@ -1,0 +1,24 @@
+---
+
+- name: Update homebrew and upgrade all previously installed packages
+  homebrew: update_homebrew=yes upgrade_all=yes
+
+- name: Tap additional repositories
+  homebrew_tap: tap={{ item }} state=present
+  with_items: homebrew_taps
+
+- name: Install homebrew packages
+  homebrew: name={{ item }} state=present
+  with_items: homebrew_packages
+
+- name: Install homebrew cask packages
+  homebrew_cask: name={{ item }}
+  with_items: homebrew_cask_packages
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir={{ homebrew_cask_appdir }}"
+
+- name: Cleanup homebrew packages
+  shell: brew cleanup
+
+- name: Cleanup homebrew cask packages
+  shell: brew cask cleanup

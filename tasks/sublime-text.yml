@@ -1,0 +1,9 @@
+---
+
+- name: Check package control is installed
+  stat: path={{ home_dir }}/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
+  register: package_control_installed
+
+- name: Install sublime text package control
+  shell: mkdir -p {{ home_dir }}/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/ && wget https://sublime.wbond.net/Package%20Control.sublime-package -P {{ home_dir }}/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
+  when: package_control_installed.stat.exists == false
