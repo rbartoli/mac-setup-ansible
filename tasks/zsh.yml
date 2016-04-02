@@ -1,7 +1,7 @@
 ---
 
 - name: Check if oh-my-zsh is installed
-  stat: path={{ home_dir}}/.oh-my-zsh
+  stat: path={{ home_dir }}/.oh-my-zsh
   register: oh_my_zsh_installed
 
 - name: Clone oh-my-zsh repo
@@ -15,6 +15,10 @@
 - name: Create a new zsh configuration file
   shell: cp {{ home_dir }}/.oh-my-zsh/templates/zshrc.zsh-template {{ home_dir }}/.zshrc
   when: zshrc_present.stat.exists == false
+
+- name: Set zsh as default shell
+  shell: chsh -s /bin/zsh
+  sudo: true
 
 - name: Check if zsh-syntax-highlighting is installed
   stat: path={{ home_dir}}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
