@@ -8,26 +8,24 @@
   git: repo=https://github.com/creationix/nvm.git dest={{ nvm_dir }} accept_hostkey=true
   when: nvm_installed.stat.exists == false
 
-- name: Activate nvm and use latest stable node version
+- name: Checkout latest version
   shell: cd {{ nvm_dir }} && git checkout `git describe --abbrev=0 --tags`
 
 - name: Update zshrc to load nvm
   lineinfile:
-    dest={{ home_dir }}/.zshrc
-    line=". ~/.nvm/nvm.sh"
-    state=present
-    insertafter=EOF
+     dest={{ home_dir }}/.zshrc
+     line=". ~/.nvm/nvm.sh"
+     state=present
+     insertafter=EOF
 
 - name: Activate nvm and install latest stable node version
-  shell: . {{ nvm_dir }}/nvm.sh && nvm install {{ node_version }} && nvm alias default {{ node_version }} executable=/bin/zsh
+  shell: . {{ nvm_dir }}/nvm.sh && nvm install node && nvm use node && nvm alias default node executable=/bin/zsh
+
+- name: Activate nvm and use latest stable node version
+  shell: . {{ nvm_dir }}/nvm.sh && nvm use node executable=/bin/zsh
 
 - name: Install npm packages
   npm: name={{ item }} global=yes
   with_items: npm_modules
   environment:
-    PATH: "{{ home_dir }}/.nvm/versions/node/{{ node_version }}/bin:{{ ansible_env.PATH }}"
-
-- name: Cleanup npm cache
-  shell: npm cache clean
-  environment:
-    PATH: "{{ home_dir }}/.nvm/versions/node/{{ node_version }}/bin:{{ ansible_env.PATH }}"
+    PATH: "{{ ansible_env.PATH }}"

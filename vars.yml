@@ -2,7 +2,6 @@ user: riccardo
 home_dir: "/Users/{{ user }}"
 nvm_dir: "{{ home_dir }}/.nvm"
 homebrew_cask_appdir: "/Applications"
-node_version: "v5.2.0"
 ruby_version: "2.2.3"
 
 homebrew_taps:
