@@ -10,7 +10,6 @@
       - include: tasks/zsh.yml tags=zsh
       - include: tasks/homebrew.yml tags=homebrew
       - include: tasks/node.yml tags=node
-      - include: tasks/ruby.yml tags=ruby
       - include: tasks/sublime-text.yml tags=sublime-text
       - include: tasks/vagrant.yml tags=vagrant
       - include: tasks/vim.yml tags=vim

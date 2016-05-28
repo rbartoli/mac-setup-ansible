@@ -97,6 +97,3 @@ npm_modules:
 
 vagrant_plugins:
   - vagrant-vbguest
-
-ruby_gems:
-  - sass
