@@ -2,7 +2,6 @@ user: riccardo
 home_dir: "/Users/{{ user }}"
 nvm_dir: "{{ home_dir }}/.nvm"
 homebrew_cask_appdir: "/Applications"
-ruby_version: "2.2.3"
 
 homebrew_taps:
   - homebrew/dupes
@@ -11,89 +10,112 @@ homebrew_taps:
   - caskroom/versions
 
 homebrew_packages:
-  - android-sdk
+  - homebrew/completions/brew-cask-completion
+  - ccat
   - coreutils
+  - diff-so-fancy
   - findutils
   - git
   - git-extras
   - git-flow
+  - homebrew/dupes/grep
+  - jpeg
+  - libpng
+  - libsass
   - mackup
-  - rbenv
-  - ruby-build
+  - mobile-shell
+  - mongodb
+  - homebrew/fuse/ntfs-3g
+  - readline
+  - tree
   - watchman
-  - wget
   - z
+  - zsh
+  - zsh-completions
 
 homebrew_cask_packages:
   - alfred
   - appcleaner
+  - atom
   - betterzipql
   - caffeine
-  - cyberduck
-  - cyberghost
+  - controlplane
   - diffmerge
   - doxie
   - dropbox
   - electrum
   - evernote
   - firefox
-  - font-source-code-pro-for-powerline
   - flux
   - gas-mask
   - google-chrome
   - google-drive
-  - hipchat
+  - helium
+  - hyperterm
   - imageoptim
-  - iterm2
+  - ios-saver
+  - iterm2-beta
+  - jadengeller-helium
   - java
-  - jumpcut
-  - mongodb
-  - mosh
+  - logitech-gaming-software
+  - namechanger
   - ngrok
-  - qlcolorcode
+  - onyx
   - qlimagesize
   - qlmarkdown
+  - qlprettypatch
   - qlstephen
+  - qlvideo
+  - quicklook-csv
   - quicklook-json
   - rescuetime
   - robomongo
   - sequel-pro
+  - serviio
   - skitch
   - skype
+  - slack
+  - sourcetree
   - spectacle
   - spotify
-  - sublime-text3
+  - suspicious-package
+  - svnx
   - teamviewer
   - the-unarchiver
-  - torbrowser
   - transmission
   - vagrant
   - virtualbox
+  - virtualbox-extension-pack
   - vlc
   - vmware-fusion
-  - webstorm
-  - ynab
+  - webpquicklook
+  - whatsapp
 
 npm_modules:
-  - bower
+  - broken-link-checker
   - browser-sync
-  - cordova
-  - ember-cli
-  - eslint
-  - generator-nom
-  - grunt
-  - gulp
+  - create-react-app
+  - cross-env
+  - david
+  - git-recent
   - http-server
-  - ios-sim
-  - jscs
-  - jshint
-  - node-inspector 
-  - nodemon
+  - hyperterm
+  - hyperterm-base16-ocean-saturated
+  - madge
+  - next-update
   - npm
+  - npm-check
   - npm-check-updates
-  - phonegap
-  - speed-test
-  - yo
+  - npm-dependents
+  - npm-dview
+  - npms-cli
+  - pure-prompt
+  - semantic-release-cli
+  - sloc
+  - speedtest-cli
+  - trash-cli
+  - updtr
+  - wilfred
 
 vagrant_plugins:
   - vagrant-vbguest
