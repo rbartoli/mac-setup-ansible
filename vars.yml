@@ -3,6 +3,47 @@ home_dir: "/Users/{{ user }}"
 nvm_dir: "{{ home_dir }}/.nvm"
 homebrew_cask_appdir: "/Applications"
 
+atom_packages:
+  - atom-beautify 
+  - atom-material-syntax 
+  - atom-material-ui 
+  - atom-ternjs 
+  - auto-detect-indentation 
+  - auto-update-packages 
+  - autoclose-html 
+  - autocomplete-modules 
+  - block-cursor 
+  - double-tag 
+  - editorconfig 
+  - emmet 
+  - file-icons 
+  - formatter-json 
+  - formatter-tidy 
+  - highlight-line 
+  - highlight-selected 
+  - js-hyperclick 
+  - language-babel 
+  - less-than-slash 
+  - linter 
+  - linter-eslint 
+  - linter-json-lint 
+  - linter-stylelint 
+  - merge-conflicts 
+  - nice-index 
+  - open-recent 
+  - pigments 
+  - project-manager 
+  - project-view 
+  - react 
+  - script 
+  - seti-syntax 
+  - sort-lines 
+  - split-diff 
+  - sync-settings 
+  - terminal-plus 
+  - todo-show 
+  - tree-view-git-branch 
+
 homebrew_taps:
   - homebrew/dupes
   - caskroom/cask
